@@ -10,12 +10,12 @@
   position: absolute;
   top: 20px;
   left: 100px;
-  width: 100px;
   height: auto;
+  width: 100%;
 }
 .header-shout {
   font-family: Roboto;
-  color: black;
+  color: white;
   font-size: 56px;
   font-weight: 700;
   letter-spacing: 1.30667px;
@@ -36,18 +36,18 @@
   white-space: nowrap;
   gap: 20px;
   justify-content: flex-end;
-  color: black;
+  color: white;
   font-family: Roboto;
   grid-area: auto;
   line-height: 24px;
-  margin: 0px 10px;
+  /* margin: 0px 10px; */
   padding: 10px 15px 15px;
   text-align: center;
   font-size: 20px;
 }
 .navbar-nav .nav-item {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 .search-container {
   position: absolute;
@@ -76,8 +76,8 @@
   height: 50px;
   outline: none;
   flex: 1;
-  border-top-left-radius: 6px; /* border-radius cho top-left là 4px */
-  border-bottom-left-radius: 6px; /* border-radius cho bottom-left là 4px */
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
 }
 .search-button {
   background-color: #f04e40;
@@ -88,9 +88,19 @@
   line-height: 16px;
   text-align: center;
   text-transform: uppercase;
-  height: 50px;
   width: 65px;
   border: none;
-  border-top-right-radius: 6px; /* border-radius cho top-left là 4px */
-  border-bottom-right-radius: 6px; /* border-radius cho bottom-left là 4px */
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  padding: 15px 0px 19px 25px;
+}
+.hover\:underline-mt:hover::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -8px;
+  width: 130%;
+  height: 2px;
+  background-color: #fff;
 }

@@ -9,7 +9,8 @@ const Header = () => {
       <div>
         <img
           className="header-img"
-          src="https://anchuongshoes.vn/storage/2020/08/giay-20.jpg"
+          // src="https://anchuongshoes.vn/storage/2020/08/giay-20.jpg"
+          src="https://blog.abit.vn/wp-content/uploads/2020/05/nguon-hang-giay-auth-88.jpg"
           alt=""
         />
       </div>
@@ -21,19 +22,41 @@ const Header = () => {
         />
       </a>
       <div className="header-shout">BEST THINGS WITH BEST OFFERS</div>
-      <div className="navbar-nav">
-        <a href="#" className="nav-item">
-          Sản phẩm
-        </a>
-        <a href="#" className="nav-item">
-          Tin tức
-        </a>
-        <a href="#" className="nav-item">
-          Tài khoản
-        </a>
+      <div class="navbar-nav">
+        <ul class="flex justify-center space-x-6">
+          <li>
+            <a
+              href="#"
+              className="text-white hover:text-gray-300 hover:underline-mt relative text-lg"
+            >
+              Sản phẩm
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              className="text-white hover:text-gray-300 hover:underline-mt relative text-lg"
+            >
+              Tin tức
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              className="text-white hover:text-gray-300 hover:underline-mt relative text-lg"
+            >
+              Tài khoản
+            </a>
+          </li>
+        </ul>
       </div>
+
       <div className="search-container">
-        <input type="text" placeholder="Search..." className="search-input" />
+        <input
+          type="text"
+          placeholder="Bạn cần tìm gì..."
+          className="search-input"
+        />
         <button type="submit" className="search-button">
           <FaSearch />
         </button>
