@@ -1,6 +1,6 @@
 import React from "react";
 import {} from "@chakra-ui/react";
-const CardShop = () => {
+const CardShop3 = () => {
   return (
     <a href="#">
       <div className="product h-[320px] w-full bg-zinc-50 rounded border-neutral-50 border-2 border-solid">
@@ -25,4 +25,4 @@ const CardShop = () => {
   );
 };
 
-export default CardShop;
+export default CardShop3;
