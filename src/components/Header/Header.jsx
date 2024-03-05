@@ -9,7 +9,6 @@ const Header = () => {
       <div>
         <img
           className="header-img"
-          // src="https://anchuongshoes.vn/storage/2020/08/giay-20.jpg"
           src="https://blog.abit.vn/wp-content/uploads/2020/05/nguon-hang-giay-auth-88.jpg"
           alt=""
         />

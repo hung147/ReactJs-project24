@@ -1,15 +1,10 @@
 import React from "react";
-
-const Ads = () => {
+function Ads(props) {
   return (
-    <a className="container-ads" href="#">
-      <img
-        src="https://projects.techmaster.vn/obo-stadium/image/banner/promo-banner-1-lg.png"
-        alt=""
-        className="ads-img"
-      />
-    </a>
+    <div>
+      <img src={props.img} alt={props.alt} />
+    </div>
   );
-};
+}
 
 export default Ads;

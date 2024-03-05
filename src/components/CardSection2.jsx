@@ -4,7 +4,7 @@ import Title2 from "./Title/Title2";
 const CardSection2 = () => {
   return (
     <div className="px-[100px] py-0">
-      <Title2 />
+      <Title2 title="OBO LỰA CHỌN" />
       <div className="grid grid-cols-5 gap-[14px]">
         <CardShop2 />
         <CardShop2 />
