@@ -7,6 +7,7 @@ const CardShop = (props) => {
         <img
           src="https://projects.techmaster.vn/obo-stadium/image/product/adidas/Adidas-Yeezy-Wave-Runner-700-Solid-Grey-Product.jpg"
           alt=""
+          className="px-[0.6875rem] py-0 bg-white"
         />
         <div className="mx-[12px]">
           <h5 className="card-title font-medium leading-5 text-left mt-0 mb-[11px] mx-0">

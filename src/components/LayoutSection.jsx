@@ -1,10 +1,10 @@
 import React from "react";
-import Title4 from "./Title/Title4";
+import Title2 from "./Title/Title2";
 
 const LayoutSection = () => {
   return (
-    <div className="px-[100px] py-0">
-      <Title4 title="BỘ SƯU TẬP" />
+    <div className="px-[120px] py-0">
+      <Title2 title="BỘ SƯU TẬP" />
       <div className="grid grid-cols-3 gap-5 flex justify-center  items-center  ">
         <a href="#">
           <img
