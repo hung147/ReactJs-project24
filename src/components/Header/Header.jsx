@@ -21,8 +21,8 @@ const Header = () => {
         />
       </a>
       <div className="header-shout">BEST THINGS WITH BEST OFFERS</div>
-      <div class="navbar-nav">
-        <ul class="flex justify-center space-x-6">
+      <div className="navbar-nav">
+        <ul className="flex justify-center space-x-6">
           <li>
             <a
               href="#"

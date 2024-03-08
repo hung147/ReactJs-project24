@@ -2,7 +2,7 @@ import React from "react";
 
 const SectionAds = () => {
   return (
-    <div className="ads-contaier  h-[260px] bg-[#2e4757]">
+    <div className="ads-contaier  h-[260px] bg-[#2e4757] mx-0 my-[50px]">
       <div className="ads-title text-white text-[40px] font-bold leading-[47px] text-center pt-[50px] pb-0 px-0">
         Đăng ký nhận bản tin OBO Stadium
       </div>
@@ -17,7 +17,7 @@ const SectionAds = () => {
             placeholder="Nhập địa chỉ email của bạn"
           />
           <button
-            class="items-start bg-[#f04e40] rounded border text-white font-bold leading-6 text-center uppercase px-[30px] py-2.5 border-[#f04e40] border-solid"
+            className="items-start bg-[#f04e40] rounded border text-white font-bold leading-6 text-center uppercase px-[30px] py-2.5 border-[#f04e40] border-solid"
             type="submit"
           >
             đăng ký

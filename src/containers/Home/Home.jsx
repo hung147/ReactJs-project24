@@ -8,7 +8,9 @@ import CardSectionProduct from "../../components/CardSectionProduct";
 import CardSectionChoose from "../../components/CardSectionChoose";
 import CardSectionLower from "../../components/CardSectionLower";
 import CardSectionNews from "../../components/CardSectionNews";
+import { CarouselDefault } from "../../components/SliderHome";
 // import "./App.css";
+
 const Home = () => {
   return (
     <div>
@@ -22,7 +24,9 @@ const Home = () => {
         <Ads img="https://projects.techmaster.vn/obo-stadium/image/banner/promo-banner-3-lg.png" />
         <LayoutSection />
         <SectionAds />
-        <CardSectionNews />
+        {/* <SliderComponent /> */}
+        <CarouselDefault />
+        {/* <CardSectionNews /> */}
         <Footer />
       </div>
     </div>

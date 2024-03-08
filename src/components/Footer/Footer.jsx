@@ -4,7 +4,7 @@ import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { SiPixiv } from "react-icons/si";
 const Footer = () => {
   return (
-    <div className="footer-container">
+    <div className="footer-container ">
       <div className="footer-navbar">
         <div className="logo">
           <img
@@ -13,8 +13,8 @@ const Footer = () => {
             alt=""
           />
         </div>
-        <div class="navbar-nav footer-navbar-nav">
-          <ul class="flex justify-center space-x-6">
+        <div className="navbar-nav footer-navbar-nav">
+          <ul className="flex justify-center space-x-6">
             <li>
               <a
                 href="#"

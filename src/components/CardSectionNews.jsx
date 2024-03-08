@@ -1,17 +1,18 @@
 import React from "react";
-import Title2 from "./Title/Title2";
+import Title from "./Title/Title";
 import NewCards from "./Cards/NewCards";
+import { Carousel } from "@material-tailwind/react";
 
 const CardSectionNews = () => {
   return (
     <div className="px-[120px] py-0">
-      <Title2 title="BÀI VIẾT MỚI" />
-      <div className="grid grid-cols-4 gap-[20px]">
+      <Title title="BÀI VIẾT MỚI" />
+      <Carousel className="grid grid-cols-4 gap-[20px]">
         <NewCards />
         <NewCards />
         <NewCards />
         <NewCards />
-      </div>
+      </Carousel>
     </div>
   );
 };
