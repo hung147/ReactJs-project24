@@ -9,6 +9,7 @@ import CardSectionChoose from "../../components/CardSectionChoose";
 import CardSectionLower from "../../components/CardSectionLower";
 import CardSectionNews from "../../components/CardSectionNews";
 import { CarouselDefault } from "../../components/SliderHome";
+import ScrollToTop from "react-scroll-to-top";
 // import "./App.css";
 
 const Home = () => {
@@ -27,6 +28,7 @@ const Home = () => {
         {/* <SliderComponent /> */}
         <CarouselDefault />
         {/* <CardSectionNews /> */}
+        <ScrollToTop />
         <Footer />
       </div>
     </div>
