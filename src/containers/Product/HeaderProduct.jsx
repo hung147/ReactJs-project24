@@ -39,7 +39,7 @@ const HeaderProduct = () => {
         <form>
           <div className="">
             <input
-              className="bg-white rounded border text-[#333333] leading-6 px-3 py-1.5 border-[#ced4da] border-solid w-[590px]  mr-[100px]  z-[100] "
+              className="bg-white rounded border text-[#333333] leading-6 px-3 py-1.5 border-[#ced4da] border-solid w-[590px]  mr-[100px]  z-[100] product-header"
               type="text"
               placeholder="Bạn cần tìm gì..."
               data-metatip="true"
