@@ -1,6 +1,5 @@
 import { Carousel } from "@material-tailwind/react";
 import Title from "./Title/Title";
-
 export function CarouselDefault() {
   return (
     <div className="px-[120px] py-0 ">
