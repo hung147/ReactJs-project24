@@ -2,9 +2,9 @@ import React from "react";
 import { FaChevronRight } from "react-icons/fa";
 import { IoFilterOutline } from "react-icons/io5";
 import { IoIosArrowDropdown } from "react-icons/io";
-import CardShop from "../../components/Cards/Card";
+// import CardShop from "../../components/Cards/Card";
 import { PaginationGroup } from "./panigation";
-
+import { AccordionCustomIcon } from "./Acordion";
 const BodyTitleProduct = () => {
   return (
     <div className="container-full  mt-[50px] px-[100px] py-0 ">
@@ -30,14 +30,20 @@ const BodyTitleProduct = () => {
             </button>
           </div>
           <div className="break-line w-full mx-0 my-5 border-t-[#D5D6D6] border-t border-solid"></div>
-          <div className="brand-content">
-            <div className="flex items-center justify-between">
-              <div className="text">Thương hiệu</div>
-              <IoIosArrowDropdown />
-            </div>
-            <div className="show dropdown"></div>
-          </div>
-          <div className="break-line w-full mx-0 my-5 border-t-[#D5D6D6] border-t border-solid"></div>
+          {/* <div className="brand-content flex">
+            <div className="text">Thương hiệu</div>
+            <AccordionCustomIcon />
+          </div> */}
+          {/* <div className="break-line w-full mx-0 my-5 border-t-[#D5D6D6] border-t border-solid"></div> */}
+          {/* <div className="brand-category flex">
+            <div className="text">Danh mục</div>
+            <AccordionCustomIcon />
+          </div> */}
+          {/* <div className="brand-size flex">
+            <div className="text">Size</div>
+            <AccordionCustomIcon />
+          </div> */}
+          <AccordionCustomIcon />
         </div>
         <div className="col-span-9">
           <div className="sort ml-5">

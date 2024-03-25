@@ -3,7 +3,6 @@ import HeaderProduct from "./HeaderProduct";
 import Footer from "../../components/Footer/Footer";
 import BodyTitleProduct from "./BodyTitleProduct";
 import ScrollToTop from "react-scroll-to-top";
-
 const Product = () => {
   return (
     <div>
