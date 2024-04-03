@@ -1,7 +1,6 @@
 import React from "react";
-import { Box, Container, Flex } from "@chakra-ui/react";
-// import { SearchBar } from "../components/SearchBar";
 import "./Header.css";
+import { Link } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
 const Header = () => {
   return (
@@ -13,23 +12,23 @@ const Header = () => {
           alt=""
         />
       </div>
-      <a href="#" className="logo">
+      <Link to={"/home"} className="logo">
         <img
           className="header-logo"
           src="https://projects.techmaster.vn/obo-stadium/image/logo-white.png"
           alt=""
         />
-      </a>
+      </Link>
       <div className="header-shout">BEST THINGS WITH BEST OFFERS</div>
       <div className="navbar-nav">
         <ul className="flex justify-center space-x-6">
           <li>
-            <a
-              href="#"
+            <Link
+              to={"/product"}
               className="text-white hover:text-gray-300 hover:underline-mt relative text-lg"
             >
               Sản phẩm
-            </a>
+            </Link>
           </li>
           <li>
             <a

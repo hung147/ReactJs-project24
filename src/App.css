@@ -25,3 +25,12 @@
     transform: translateY(0%);
   }
 }
+.scroll-to-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input-price:focus {
+  outline: none;
+  border: 1px solid #000;
+}

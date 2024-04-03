@@ -1,9 +1,8 @@
 import React from "react";
-import {} from "@chakra-ui/react";
 const CardShop = (props) => {
   return (
     <a href="#">
-      <div className="product h-[320px] w-full bg-zinc-50 rounded border-neutral-50 border-2 border-solid">
+      <div className="product h-[320px] w-full bg-zinc-50 rounded border-neutral-50 border-2 border-solid hover:shadow-lg transition duration-300 ease-in-out">
         <img
           src="https://projects.techmaster.vn/obo-stadium/image/product/adidas/Adidas-Yeezy-Wave-Runner-700-Solid-Grey-Product.jpg"
           alt=""

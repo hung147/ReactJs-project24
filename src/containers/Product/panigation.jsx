@@ -28,12 +28,12 @@ export function PaginationGroup() {
 
   return (
     <div>
-      <div className="product-row grid grid-cols-4 grid-rows-4 gap-4 m-5">
+      <div className="product-row grid grid-cols-4 grid-rows-4 gap-4 ml-[20px] mt-[40px]">
         {renderProducts()}
       </div>
       <ButtonGroup
         variant="outlined"
-        className="mb-4 flex items-center justify-center"
+        className="mb-4 flex items-center justify-center mt-[60px]"
       >
         <IconButton onClick={prev}>
           <ArrowLeftIcon strokeWidth={2} className="h-4 w-4" />

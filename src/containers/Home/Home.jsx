@@ -7,10 +7,8 @@ import SectionAds from "../../components/SectionAds";
 import CardSectionProduct from "../../components/CardSectionProduct";
 import CardSectionChoose from "../../components/CardSectionChoose";
 import CardSectionLower from "../../components/CardSectionLower";
-// import CardSectionNews from "../../components/CardSectionNews";
 import { CarouselDefault } from "../../components/SliderHome";
 import ScrollToTop from "react-scroll-to-top";
-// import "./App.css";
 
 const Home = () => {
   return (
@@ -24,9 +22,7 @@ const Home = () => {
       <Ads img="https://projects.techmaster.vn/obo-stadium/image/banner/promo-banner-3-lg.png" />
       <LayoutSection />
       <SectionAds />
-      {/* <SliderComponent /> */}
       <CarouselDefault />
-      {/* <CardSectionNews /> */}
       <ScrollToTop />
       <Footer />
     </div>
