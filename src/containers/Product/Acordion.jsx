@@ -85,7 +85,7 @@ export function AccordionCustomIcon() {
         <AccordionBody>
           <div className="select-filter">
             {brandDataListArr?.map((item, index) => {
-              return <CheckboxRippleEffect title={item.title} />;
+              return <CheckboxRippleEffect key={index} title={item.title} />;
             })}
           </div>
           <button className="ml-3.5 mt-1.5" onClick={() => handleClick()}>
