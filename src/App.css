@@ -34,3 +34,32 @@
   outline: none;
   border: 1px solid #000;
 }
+.sort-dropdown {
+  position: absolute;
+  /* display: none; */
+  background-color: white; /* Màu nền cho dropdown */
+  border: 1px solid #d5d6d6; /* Đường viền cho dropdown */
+  z-index: 1000; /* Đảm bảo dropdown hiển thị trên các phần tử khác */
+  width: 100%;
+  top: 49px;
+  left: 0;
+}
+
+.sort-content {
+  position: relative; /* Đảm bảo phần tử cha của sort-item có vị trí tương đối */
+}
+.sort-item {
+  padding: 0.9375rem;
+  padding-right: 150px;
+  width: 101%;
+}
+.sort-item.active {
+  background-color: #ce2d2f;
+  color: white;
+}
+.sort-item:hover {
+  color: #f57223;
+}
+.sort-name {
+  font-weight: 600;
+}
