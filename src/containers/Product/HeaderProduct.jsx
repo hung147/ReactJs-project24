@@ -1,15 +1,30 @@
-import React from "react";
-import "/Users/ngtuonghung/Reactjs-project24/reactjs-project24/src/components/Header/Header.css";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import useDebounce from "../../components/useDebounce";
+import logoWhite from "../../assets/img/logo-white.png";
+
+// import data from "./data";
+
 const HeaderProduct = () => {
+  const [search, setSearch] = useState("");
+  const [filteredTitle, setFilteredTitle] = useState([]);
+
+  // useDebounce(
+  //   () => {
+  //     setFilteredTitle(
+  //       data.filter((d) => d.title.toLowerCase().includes(search.toLowerCase()))
+  //     );
+  //   },
+  //   [data, search],
+  //   800
+  // );
+
+  const handleSearch = (e) => setSearch(e.target.value);
+
   return (
     <div className="container-full bg-[#333333]  leading-6  h-[100px] flex justify-center items-center">
       <Link to="/home" className="logo">
-        <img
-          className="header-logo"
-          src="https://projects.techmaster.vn/obo-stadium/image/logo-white.png"
-          alt=""
-        />
+        <img className="header-logo" src={logoWhite} alt="" />
       </Link>
       <div className="navbar-nav">
         <ul className="flex justify-center space-x-6">
@@ -46,8 +61,13 @@ const HeaderProduct = () => {
               className="bg-white rounded border text-[#333333] leading-6 px-3 py-1.5 border-[#ced4da] border-solid w-[590px]  mr-[100px]  z-[100] product-header"
               type="text"
               placeholder="Bạn cần tìm gì..."
+              onChange={handleSearch}
+              value={search}
               data-metatip="true"
             ></input>
+            {filteredTitle.map((f) => (
+              <p key={f.id}>{f.title}</p>
+            ))}
           </div>
         </form>
       </div>

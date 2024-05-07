@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { IconButton, ButtonGroup } from "@material-tailwind/react";
 import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/react/24/outline";
 import CardShop from "../../components/Cards/Card";
-export function PaginationGroup1() {
+export function PaginationGroup2() {
   const [active, setActive] = useState(1);
   const [products, setProducts] = useState([]);
   const itemsPerPage = 16;
@@ -10,7 +10,7 @@ export function PaginationGroup1() {
   http: useEffect(() => {
     const fetchProducts = async () => {
       const res = await fetch(
-        "http://localhost:1337/api/products?populate=*&sort[0]=priceSmallest:asc",
+        "http://localhost:1337/api/products?populate=*&sort[0]=priceSmallest:desc",
         {
           headers: {
             Authorization: `Bearer ce5664b8779d3f83f4d8543453847150e23fe2f397a9e2473e35211a884dab202d99baaf91141b842358d52d6f64c72cce490788564528a161b566a292abc17752ecd595ac42a99db39770997676976a091694b51a06a5f8b53a2e479e7ce0df2e1f50c586997733e0ceae3dc4624d5095939b3ece125554093ff25121cc0692`,

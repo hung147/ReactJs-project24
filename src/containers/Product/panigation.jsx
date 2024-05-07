@@ -58,7 +58,7 @@ export function PaginationGroup() {
           <IconButton
             key={pageNum + 1}
             onClick={() => setActive(pageNum + 1)}
-            active={active === pageNum + 1}
+            active={active === pageNum + 1 ? "true" : "false"}
             className={
               active === pageNum + 1 ? "bg-gray-100  text-[#fe5e35]" : ""
             }

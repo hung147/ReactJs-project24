@@ -2,6 +2,8 @@ import React from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
+import logoWhite from "../../assets/img/logo-white.png";
+
 const Header = () => {
   return (
     <div className="header-container">
@@ -13,11 +15,7 @@ const Header = () => {
         />
       </div>
       <Link to={"/home"} className="logo">
-        <img
-          className="header-logo"
-          src="https://projects.techmaster.vn/obo-stadium/image/logo-white.png"
-          alt=""
-        />
+        <img className="header-logo" src={logoWhite} alt="logo" />
       </Link>
       <div className="header-shout">BEST THINGS WITH BEST OFFERS</div>
       <div className="navbar-nav">

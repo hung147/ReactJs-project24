@@ -3,7 +3,7 @@ import Title from "./Title/Title";
 
 const LayoutSection = () => {
   return (
-    <div className="px-[120px] py-0">
+    <div className="px-[100px] py-0">
       <Title title="BỘ SƯU TẬP" />
       <div className="grid grid-cols-3 gap-5  justify-center  items-center  ">
         <a href="#">

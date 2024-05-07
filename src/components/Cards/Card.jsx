@@ -1,10 +1,11 @@
 import _ from "lodash";
 import React from "react";
+import { Link } from "react-router-dom";
 const CardShop = ({ product }) => {
   const img = _.get(product, "img.data.attributes.url", "");
 
   return (
-    <a href="#">
+    <Link to="/product-details">
       <div className="product h-[320px] w-full bg-zinc-50 rounded border-neutral-50 border-2 border-solid hover:shadow-lg transition duration-300 ease-in-out">
         <img
           src={`http://localhost:1337${img}`}
@@ -26,7 +27,7 @@ const CardShop = ({ product }) => {
           </p>
         </div>
       </div>
-    </a>
+    </Link>
   );
 };
 

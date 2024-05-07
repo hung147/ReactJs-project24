@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import CardShop from "./Cards/Card";
 import Title from "./Title/Title";
-import { useState, useEffect } from "react";
-const CardSectionProduct = () => {
+import { useState } from "react";
+
+const CardSectionRelate = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     const fetchProducts = async () => {
@@ -18,16 +19,16 @@ const CardSectionProduct = () => {
   }, []);
   const renderProducts = () => {
     return products
-      .slice(0, 5)
+      .slice(20, 25)
       .map((item, index) => <CardShop key={index} product={item.attributes} />);
   };
 
   return (
-    <div className="px-[100px] py-0">
-      <Title title="SẢN PHẨM BÁN CHẠY" />
+    <div className="w-full">
+      <Title title="SẢN PHẨM LIÊN QUAN" />
       <div className="grid grid-cols-5 gap-[14px]">{renderProducts()}</div>
     </div>
   );
 };
 
-export default CardSectionProduct;
+export default CardSectionRelate;

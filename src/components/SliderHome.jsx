@@ -2,7 +2,7 @@ import { Carousel } from "@material-tailwind/react";
 import Title from "./Title/Title";
 export function CarouselDefault() {
   return (
-    <div className="px-[120px] py-0 ">
+    <div className="px-[100px] py-0 ">
       <Title title="BÀI VIẾT MỚI" />
       <Carousel className="grid grid-cols-4 gap-[20px]">
         <div className=" w-[284px] bg-neutral-50 rounded relative ">

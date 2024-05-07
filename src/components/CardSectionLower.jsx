@@ -23,7 +23,7 @@ const CardSectionLower = () => {
   };
 
   return (
-    <div className="px-[120px] py-0">
+    <div className="px-[100px] py-0">
       <Title title="THẤP HƠN “GIÁ HÃNG”" />
       <div className="grid grid-cols-5 gap-[14px]">{renderProducts()}</div>
     </div>
