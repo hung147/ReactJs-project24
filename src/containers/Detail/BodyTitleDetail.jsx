@@ -3,7 +3,18 @@ import { FaChevronRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import SizeButton from "./SizeButton";
 import CardSectionRelate from "../../components/CardSectionRelate";
+import Zoom from "./ZoomDetail";
+import "./zoom.css";
+import SlideDetail from "./SlideDetail";
+import { useState } from "react";
 const BodyTitleDetail = () => {
+  const images = [
+    "https://projects.techmaster.vn/obo-stadium/image/product-details-image/1.jpg",
+    "https://projects.techmaster.vn/obo-stadium/image/product-details-image/2.jpg",
+    "https://projects.techmaster.vn/obo-stadium/image/product-details-image/3.jpg",
+    "https://projects.techmaster.vn/obo-stadium/image/product-details-image/4.jpg",
+    "https://projects.techmaster.vn/obo-stadium/image/product-details-image/5.jpg",
+  ];
   return (
     <div>
       <div className="container-full mt-[50px] px-[100px] py-0">
@@ -40,12 +51,16 @@ const BodyTitleDetail = () => {
             <div className="detail-code">Style Code: B75571</div>
           </div>
           <div className="detail-main flex">
-            <div className="detail-img w-1/2 text-[#333] basis-6/12 leading-6 text-left  pr-[15px] py-0">
-              <img
-                src="https://projects.techmaster.vn/obo-stadium/image/product-details-image/1.jpg"
-                alt=""
-              />
+            <div className="detail-img w-1/2 text-[#333] basis-6/12 leading-6 text-left pr-[15px] py-0 flex-col">
+              <div>
+                <Zoom />
+              </div>
+              <div>
+                {/* <SlideDetail images={images} handleClick={handleClick} /> */}
+                <SlideDetail images={images} />
+              </div>
             </div>
+
             <div className="detail-desc w-1/2 text-[#333] basis-6/12 leading-6 text-left pl-[15px] py-0">
               <div className="detail-title text-[#333] text-[28px] font-medium leading-[33.6px] text-left mt-0 mb-5 mx-0">
                 Mô tả sản phẩm

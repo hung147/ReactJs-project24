@@ -1,0 +1,8 @@
+/* SlideNews.css */
+.slider-wrapper .slick-slide {
+  padding-right: 20px; /* Khoảng cách giữa các NewCard */
+}
+
+.slider-wrapper .slick-slide:not(.slick-current) {
+  opacity: 0.5; /* Ẩn các NewCard không phải là current slide */
+}

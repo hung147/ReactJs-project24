@@ -38,7 +38,7 @@ const HeaderProduct = () => {
           </li>
           <li>
             <Link
-              to="/"
+              to="/news"
               className="text-white hover:text-gray-300 hover:underline-mt relative text-lg"
             >
               Tin tức

@@ -1,23 +1,21 @@
 import React from "react";
-import "./Header.css";
 import { Link } from "react-router-dom";
-import { FaSearch } from "react-icons/fa";
 import logoWhite from "../../assets/img/logo-white.png";
-
-const Header = () => {
+import { FaSearch } from "react-icons/fa";
+const NewsHeader = () => {
   return (
     <div className="header-container">
       <div>
         <img
           className="header-img"
-          src="https://blog.abit.vn/wp-content/uploads/2020/05/nguon-hang-giay-auth-88.jpg"
+          src="https://i.pinimg.com/736x/b6/7e/51/b67e510b0c88850c6d41c18db2663312.jpg"
           alt=""
         />
       </div>
       <Link to={"/home"} className="logo">
         <img className="header-logo" src={logoWhite} alt="" />
       </Link>
-      <div className="header-shout">BEST THINGS WITH BEST OFFERS</div>
+      <div className="header-shout">Tin tức</div>
       <div className="navbar-nav">
         <ul className="flex justify-center space-x-6">
           <li>
@@ -31,7 +29,7 @@ const Header = () => {
           <li>
             <a
               href={"/news"}
-              className="text-white hover:text-gray-300 hover:underline-mt relative text-lg"
+              className="text-white underline-mt relative text-lg"
             >
               Tin tức
             </a>
@@ -61,4 +59,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default NewsHeader;
