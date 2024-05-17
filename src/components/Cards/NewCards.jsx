@@ -2,7 +2,7 @@ import React from "react";
 
 const NewCards = () => {
   return (
-    <div className="w-[284px] bg-neutral-50 rounded relative">
+    <div className="w-[284px] bg-neutral-50 rounded relative     transition-shadow  duration-300 ease-in-out hover:shadow-lg">
       <img
         className="card-img-top  h-[200px] rounded"
         src="https://projects.techmaster.vn/obo-stadium/image/news/news-2-thumnails.jpg"

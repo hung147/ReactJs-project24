@@ -31,7 +31,7 @@ const HeaderProduct = () => {
           <li>
             <Link
               to="/product"
-              className="text-white underline-mt relative text-lg "
+              className="text-white hover:text-gray-300 hover:underline-mt relative text-lg"
             >
               Sản phẩm
             </Link>
@@ -39,7 +39,7 @@ const HeaderProduct = () => {
           <li>
             <Link
               to="/news"
-              className="text-white hover:text-gray-300 hover:underline-mt relative text-lg"
+              className="text-white underline-mt relative text-lg "
             >
               Tin tức
             </Link>
