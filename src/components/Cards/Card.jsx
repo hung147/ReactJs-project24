@@ -20,7 +20,7 @@ const CardShop = ({ product }) => {
             Giá thấp nhất hiện tại
           </p>
           <p className="price text-[#333333] text-2xl font-bold leading-9 text-left mt-0 mb-[5px] mx-0">
-            {product?.priceSmallest || ""}
+            {product?.priceSmallest || ""} ₫
           </p>
           <p className="text-[#767676] leading-6 text-left">
             Đã bán {product?.bought || 0} đôi

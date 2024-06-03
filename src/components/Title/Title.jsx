@@ -4,7 +4,7 @@ const Title = (props) => {
   return (
     <div className="title-container">
       <h2 className="title-home">{props.title}</h2>
-      <a href="#" className="title-more">
+      <a href="/product" className="title-more">
         XEM THÊM
       </a>
     </div>

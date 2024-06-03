@@ -4,7 +4,7 @@ import Product from "../containers/Product/Product";
 import Detail from "../containers/Detail/Detail";
 import News from "../containers/News/News";
 import Post from "../containers/Post/Post";
-// import Login from "../containers/Login/Login";
+import Login from "../containers/Login/Login";
 // import Register from "../containers/Register/Register";
 export const publicRouter = [
   {
@@ -27,4 +27,12 @@ export const publicRouter = [
     path: PATH.post,
     element: Post,
   },
+  {
+    path: PATH.login,
+    element: Login,
+  },
+  // {
+  //   path: PATH.register,
+  //   element: Register,
+  // },
 ];

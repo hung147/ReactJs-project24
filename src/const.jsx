@@ -4,4 +4,5 @@ export const PATH = {
   detail: "/product-details",
   news: "/news",
   post: "/post",
+  login: "/login",
 };

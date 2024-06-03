@@ -1,10 +1,21 @@
-import React from "react";
-import "./Header.css";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
 import logoWhite from "../../assets/img/logo-white.png";
-
+import "./Header.css";
+// import ModalLogin from "../../containers/Login/Modal";
 const Header = () => {
+  // const [showLogin, setShowLogin] = useState(false);
+
+  // const handleLoginClick = (e) => {
+  //   e.preventDefault(); // Ngăn chặn link dẫn đến trang khác
+  //   setShowLogin(true);
+  // };
+
+  // const handleCloseLogin = () => {
+  //   setShowLogin(false);
+  // };
+
   return (
     <div className="header-container">
       <div>
@@ -30,19 +41,20 @@ const Header = () => {
           </li>
           <li>
             <a
-              href={"/news"}
+              href="/news"
               className="text-white hover:text-gray-300 hover:underline-mt relative text-lg"
             >
               Tin tức
             </a>
           </li>
           <li>
-            <a
-              href="#"
+            <Link
+              to={"/login"}
+              // onClick={handleLoginClick}
               className="text-white hover:text-gray-300 hover:underline-mt relative text-lg"
             >
               Tài khoản
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
@@ -57,6 +69,7 @@ const Header = () => {
           <FaSearch />
         </button>
       </div>
+      {/* <ModalLogin open={showLogin} handleClose={handleCloseLogin} /> */}
     </div>
   );
 };
