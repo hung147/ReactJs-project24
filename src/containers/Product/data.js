@@ -7,15 +7,19 @@ const data = [
     publishedAt: "2024-04-05T17:51:11.886Z",
     priceSmallest: "2",
     bought: "160",
+    brand: "Asisc",
+    img: "https://projects.techmaster.vn/obo-stadium/image/product/air-jordan/Air-Jordan-1-Retro-High-Satin-Black-Toe.jpg",
   },
   {
     id: 2,
-    title: "Adidas Yeezy Boost 700 Wave Runner Solid Grey",
+    title: "Contezd Yamuta Boost Now 300 Runner Black",
     createdAt: "2024-04-09T14:21:42.205Z",
     updatedAt: "2024-04-12T17:58:58.910Z",
     publishedAt: "2024-04-09T14:25:59.089Z",
     priceSmallest: "13323313",
     bought: "159",
+    brand: "Jordan",
+    img: "https://projects.techmaster.vn/obo-stadium/image/product/asics/Asics-Gel-Lyte-III-Afew-X-Beams-Orange-Koi-Product.jpg",
   },
   {
     id: 3,
@@ -25,6 +29,8 @@ const data = [
     publishedAt: "2024-04-12T18:05:20.939Z",
     priceSmallest: "2.000.000",
     bought: "144",
+    brand: "Asisc",
+    img: "https://projects.techmaster.vn/obo-stadium/image/product/air-jordan/Air-Jordan-12-Retro-Fiba-2019.jpeg",
   },
   {
     id: 4,
@@ -34,6 +40,8 @@ const data = [
     publishedAt: "2024-04-12T18:05:15.807Z",
     priceSmallest: "2.000.000",
     bought: "313",
+    brand: "Asisc",
+    img: "https://projects.techmaster.vn/obo-stadium/image/product/adidas/adidas-Yeezy-Boost-500-Bone-White.jpg",
   },
   {
     id: 5,
@@ -43,8 +51,9 @@ const data = [
     publishedAt: "2024-04-12T18:06:13.824Z",
     priceSmallest: "2.000.000",
     bought: "313",
+    brand: "Jordan",
+    img: "https://projects.techmaster.vn/obo-stadium/image/product/converse/Converse-Chuck-Taylor-All-Star-70s-Hi-Off-White-Product.jpg",
   },
-  // Add more data items here
 ];
 
 export default data;
