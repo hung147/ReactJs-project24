@@ -1,20 +1,36 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
+import { onAuthStateChanged } from "firebase/auth";
 import logoWhite from "../../assets/img/logo-white.png";
+import { auth } from "/Users/ngtuonghung/Reactjs-project24/reactjs-project24/src/containers/Login/FirebaseConfig.js";
 import "./Header.css";
-// import ModalLogin from "../../containers/Login/Modal";
+
 const Header = () => {
-  // const [showLogin, setShowLogin] = useState(false);
+  const [user, setUser] = useState(null);
+  const navigate = useNavigate(); // Initialize useNavigate
 
-  // const handleLoginClick = (e) => {
-  //   e.preventDefault(); // Ngăn chặn link dẫn đến trang khác
-  //   setShowLogin(true);
-  // };
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      if (currentUser) {
+        setUser(currentUser);
+      } else {
+        setUser(null);
+      }
+    });
 
-  // const handleCloseLogin = () => {
-  //   setShowLogin(false);
-  // };
+    // Cleanup subscription on unmount
+    return () => unsubscribe();
+  }, []);
+
+  const handleAccountClick = (e) => {
+    e.preventDefault();
+    if (user) {
+      navigate("/account");
+    } else {
+      navigate("/login");
+    }
+  };
 
   return (
     <div className="header-container">
@@ -48,13 +64,13 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <Link
-              to={"/login"}
-              // onClick={handleLoginClick}
+            <a
+              href="#!"
+              onClick={handleAccountClick}
               className="text-white hover:text-gray-300 hover:underline-mt relative text-lg"
             >
               Tài khoản
-            </Link>
+            </a>
           </li>
         </ul>
       </div>
@@ -69,7 +85,6 @@ const Header = () => {
           <FaSearch />
         </button>
       </div>
-      {/* <ModalLogin open={showLogin} handleClose={handleCloseLogin} /> */}
     </div>
   );
 };

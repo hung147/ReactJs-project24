@@ -75,6 +75,7 @@ const HeaderProduct = () => {
               <div className="search-result absolute block  p-0 w-full text-center max-h-[50vh] overflow-y-scroll bg-white shadow-[rgba(0,0,0,0.1)_0px_4px_6px_2px] z-[100] top-[50px]">
                 {filteredTitle.map((f) => (
                   <a
+                    href="./product-details"
                     className="grid grid-cols-[1fr_2fr] text-left gap-5 items-center p-5 border-b-[#d5d6d6] border-b border-solid"
                     key={f.id}
                   >

@@ -1,9 +1,59 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { TEInput, TERipple } from "tw-elements-react";
 import Checkbox from "@mui/material/Checkbox";
+import "./Welcome.css";
+import { auth } from "./FirebaseConfig";
+import {
+  createUserWithEmailAndPassword,
+  onAuthStateChanged,
+} from "firebase/auth";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
+
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
-import "./Welcome.css"
+
 export default function ExampleV3() {
+  const [user, setUser] = useState(null);
+  const [error, setError] = useState(""); // State to hold error messages
+  const navigate = useNavigate(); // Initialize useNavigate
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      if (currentUser) {
+        console.log("User is signed in:", currentUser);
+        setUser(currentUser);
+      } else {
+        console.log("No user is signed in.");
+        setUser(null);
+      }
+    });
+
+    // Cleanup subscription on unmount
+    return () => unsubscribe();
+  }, []);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    setError(""); // Reset error message
+
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((data) => {
+        console.log("User created successfully:", data.user);
+        navigate("/home"); // Navigate to account page on success
+      })
+      .catch((error) => {
+        if (error.code === "auth/email-already-in-use") {
+          setError(
+            "The email address is already in use. Please try logging in."
+          );
+        } else {
+          setError("Error creating user: " + error.message);
+        }
+        console.error("Error creating user:", error);
+      });
+  };
+
   return (
     <section className="h-screen">
       <div className="container h-full px-6 py-24">
@@ -17,21 +67,26 @@ export default function ExampleV3() {
           </div>
 
           <div className="md:w-8/12 lg:ml-6 lg:w-5/12">
-            <form>
+            <form onSubmit={handleSubmit}>
+              {/* Error message */}
+              {error && <div className="mb-4 text-red-600">{error}</div>}
+
               {/* Email input */}
               <TEInput
                 type="email"
                 label="Email address"
                 size="lg"
-                className="mb-6"
+                className="mb-6 te-input-label"
+                name="email"
               />
 
               {/* Password input */}
               <TEInput
                 type="password"
                 label="Password"
-                className="mb-6"
+                className="mb-6 te-input-label"
                 size="lg"
+                name="password"
               />
 
               {/* Remember me checkbox */}
@@ -49,7 +104,7 @@ export default function ExampleV3() {
                 {/* Forgot password link */}
                 <a
                   href="#!"
-                  className="text-[#3a71ca] text-primary transition duration-150 ease-in-out hover:text-primary-600 focus:text-primary-600 active:text-primary-700"
+                  className="text-[red] text-primary transition duration-150 ease-in-out hover:text-primary-600 focus:text-primary-600 active:text-primary-700"
                 >
                   Forgot password?
                 </a>
@@ -58,8 +113,8 @@ export default function ExampleV3() {
               {/* Submit button */}
               <TERipple rippleColor="light" className="w-full">
                 <button
-                  type="button"
-                  className="inline-block w-full rounded bg-primary px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:bg-primary-600 focus:bg-primary-600 active:bg-primary-700 bg-[#3a71ca] "
+                  type="submit"
+                  className="inline-block w-full rounded bg-primary px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:bg-primary-600 focus:bg-primary-600 active:bg-primary-700 bg-[#3a71ca]"
                 >
                   Sign in
                 </button>

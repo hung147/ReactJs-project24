@@ -66,3 +66,6 @@ input[type="email"],
 input[type="password"] {
   color: black;
 }
+.te-input-label {
+  color: black !important;
+}

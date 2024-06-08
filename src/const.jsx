@@ -5,4 +5,5 @@ export const PATH = {
   news: "/news",
   post: "/post",
   login: "/login",
+  account: "/account",
 };
