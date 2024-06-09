@@ -1,16 +1,15 @@
 import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import logoWhite from "../../assets/img/logo-white.png";
-import data from "./data";
-import useDebounce from "./useDebounce";
+import data from "/Users/ngtuonghung/Reactjs-project24/reactjs-project24/src/containers/Product/data.js";
+import useDebounce from "/Users/ngtuonghung/Reactjs-project24/reactjs-project24/src/containers/Product/useDebounce.js";
 import useClickOutside from "../../hooks/useClickOutside";
 
-const HeaderProduct = () => {
+const HeaderAccount = ({ activeTab, user }) => {
   const [search, setSearch] = useState("");
   const [filteredTitle, setFilteredTitle] = useState([]);
   const [showResults, setShowResults] = useState(false);
   const searchRef = useRef(null);
-
   useDebounce(
     () => {
       setFilteredTitle(
@@ -36,7 +35,9 @@ const HeaderProduct = () => {
           <li>
             <Link
               to="/product"
-              className="text-white underline-mt relative text-lg"
+              className={`text-white ${
+                activeTab === "product" ? "underline-mt" : "hover:text-gray-300"
+              } relative text-lg`}
             >
               Sản phẩm
             </Link>
@@ -44,17 +45,23 @@ const HeaderProduct = () => {
           <li>
             <Link
               to="/news"
-              className="text-white hover:text-gray-300 hover:underline-mt relative text-lg"
+              className={`text-white ${
+                activeTab === "news" ? "underline-mt" : "hover:text-gray-300"
+              } relative text-lg`}
             >
               Tin tức
             </Link>
           </li>
           <li>
             <Link
-              to="/login"
-              className="text-white hover:text-gray-300 hover:underline-mt relative text-lg"
+              to={user ? "/account" : "/login"}
+              className={`text-white ${
+                activeTab === "account" ? "underline-mt" : "hover:text-gray-300"
+              } relative text-lg`}
             >
-              Tài khoản
+              {user
+                ? `Xin chào, ${user.displayName || user.email}`
+                : "Tài khoản"}
             </Link>
           </li>
         </ul>
@@ -116,4 +123,4 @@ const HeaderProduct = () => {
   );
 };
 
-export default HeaderProduct;
+export default HeaderAccount;

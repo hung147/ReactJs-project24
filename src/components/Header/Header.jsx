@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
-import { onAuthStateChanged } from "firebase/auth";
+import { onAuthStateChanged, signOut } from "firebase/auth";
 import logoWhite from "../../assets/img/logo-white.png";
 import { auth } from "/Users/ngtuonghung/Reactjs-project24/reactjs-project24/src/containers/Login/FirebaseConfig.js";
 import "./Header.css";
@@ -19,7 +19,7 @@ const Header = () => {
       }
     });
 
-    // Cleanup subscription on unmount
+    // Dọn dẹp khi thành phần unmount
     return () => unsubscribe();
   }, []);
 
@@ -31,7 +31,15 @@ const Header = () => {
       navigate("/login");
     }
   };
-
+const handleLogout = () => {
+  signOut(auth)
+    .then(() => {
+      navigate("/home");
+    })
+    .catch((error) => {
+      console.error("Error signing out: ", error);
+    });
+};
   return (
     <div className="header-container">
       <div>
@@ -72,6 +80,16 @@ const Header = () => {
               Tài khoản
             </a>
           </li>
+          {user && (
+            <li>
+              <button
+                onClick={handleLogout}
+                className="text-white hover:text-gray-300 hover:underline-mt relative text-lg"
+              >
+                Đăng xuất
+              </button>
+            </li>
+          )}
         </ul>
       </div>
 

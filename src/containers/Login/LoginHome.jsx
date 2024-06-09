@@ -4,7 +4,6 @@ import Footer from "../../components/Footer/Footer";
 import HeaderLogin from "./HeaderLogin";
 import Welcome from "./Welcome";
 import ScrollToTop from "react-scroll-to-top";
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
 const Login = () => {
   return (
     <div>

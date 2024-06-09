@@ -21,6 +21,7 @@ export default function ExampleV3() {
       if (currentUser) {
         console.log("User is signed in:", currentUser);
         setUser(currentUser);
+        navigate("/account");
       } else {
         console.log("No user is signed in.");
         setUser(null);
@@ -29,7 +30,7 @@ export default function ExampleV3() {
 
     // Cleanup subscription on unmount
     return () => unsubscribe();
-  }, []);
+  }, [navigate]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -40,7 +41,7 @@ export default function ExampleV3() {
     createUserWithEmailAndPassword(auth, email, password)
       .then((data) => {
         console.log("User created successfully:", data.user);
-        navigate("/home"); // Navigate to account page on success
+        navigate("/home"); // **Navigate to account page on success**
       })
       .catch((error) => {
         if (error.code === "auth/email-already-in-use") {

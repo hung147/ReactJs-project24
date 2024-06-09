@@ -6,7 +6,7 @@ import News from "../containers/News/News";
 import Post from "../containers/Post/Post";
 import LoginHome from "../containers/Login/LoginHome";
 // import Register from "../containers/Register/Register";
-import Account from "../containers/Account";
+import Account from "../containers/Account/Account";
 export const publicRouter = [
   {
     path: PATH.home,
