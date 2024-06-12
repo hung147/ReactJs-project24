@@ -2,6 +2,10 @@ import React, { useEffect, useState } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "/Users/ngtuonghung/Reactjs-project24/reactjs-project24/src/containers/Login/FirebaseConfig.js";
 import HeaderAccount from "./HeaderAccount";
+import Footer from "../../components/Footer/Footer";
+import ScrollToTop from "react-scroll-to-top";
+import BodyAccount from "./BodyAccount";
+
 const Account = () => {
   const [user, setUser] = useState(null);
 
@@ -23,6 +27,9 @@ const Account = () => {
   return (
     <div>
       <HeaderAccount activeTab="account" />
+      <BodyAccount />
+      <ScrollToTop />
+      <Footer />
     </div>
   );
 };

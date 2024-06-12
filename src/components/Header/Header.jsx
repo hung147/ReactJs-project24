@@ -9,7 +9,7 @@ import "./Header.css";
 const Header = () => {
   const [user, setUser] = useState(null);
   const navigate = useNavigate(); // Initialize useNavigate
-
+// useEffect nay de xac minh k can thiet vi da dung o body account
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
@@ -31,15 +31,15 @@ const Header = () => {
       navigate("/login");
     }
   };
-const handleLogout = () => {
-  signOut(auth)
-    .then(() => {
-      navigate("/home");
-    })
-    .catch((error) => {
-      console.error("Error signing out: ", error);
-    });
-};
+  // const handleLogout = () => {
+  //   signOut(auth)
+  //     .then(() => {
+  //       navigate("/home");
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error signing out: ", error);
+  //     });
+  // };
   return (
     <div className="header-container">
       <div>
@@ -80,16 +80,6 @@ const handleLogout = () => {
               Tài khoản
             </a>
           </li>
-          {user && (
-            <li>
-              <button
-                onClick={handleLogout}
-                className="text-white hover:text-gray-300 hover:underline-mt relative text-lg"
-              >
-                Đăng xuất
-              </button>
-            </li>
-          )}
         </ul>
       </div>
 
