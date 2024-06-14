@@ -27,16 +27,21 @@ const BodyAccount = () => {
     return () => unsubscribe();
   }, []);
 
-  // set birthday
+  // set birthday,email,name..
   const [date, setDate] = useState(2);
   const [month, setMonth] = useState(3);
   const [year, setYear] = useState(1995);
+  const [name, setName] = useState("Nguyen Tuong Hung");
+  const [email, setEmail] = useState("ngtuonghung@gmail.com");
+  const [number, setNumber] = useState("0397489461");
+  const [password, setPassword] = useState("hungdo11o2");
   //   change content nav-bar
   const [activeTab, setActiveTab] = useState("profile");
   // Function to handle tab change
   const handleTabChange = (tab) => {
     setActiveTab(tab);
   };
+
   const renderContent = () => {
     switch (activeTab) {
       case "profile":
@@ -47,17 +52,21 @@ const BodyAccount = () => {
               className="setting-box rounded border text-[#333] leading-6 text-left px-10 py-[30px] border-[#d5d6d6] border-solid"
             >
               <div className="full-name item-row mb-4">
-                <div className="text1 mb-2">Họ tên</div>
+                <div className="text1 mb-2">Họ tên </div>
                 <input
+                  value={name}
                   type="text"
                   className="form-control w-full px-3 py-2 border rounded-md"
+                  onChange={setName}
                 />
               </div>
               <div className="email item-row mb-4">
                 <div className="text1 mb-2">Email</div>
                 <input
+                  value={email}
                   type="text"
                   className="form-control w-full px-3 py-2 border rounded-md"
+                  onChange={setEmail}
                   //   disabled
                 />
               </div>
@@ -65,10 +74,12 @@ const BodyAccount = () => {
                 <div className="text1 mb-2">Mật khẩu</div>
                 <div className="password-wrapper mb-2 flex items-center justify-between">
                   <input
+                    value={password}
                     type="password"
-                    disabled
+                    // disabled
                     className="form-control w-full px-3 py-2 border rounded-md"
                     autoComplete="off"
+                    onChange={setPassword}
                   />
                   <a
                     className="change-password text-[#f04e40] leading-6 text-left ml-4 mr-0 my-0 whitespace-nowrap"
@@ -83,6 +94,8 @@ const BodyAccount = () => {
               <div className="phone item-row mb-4">
                 <div className="text1 mb-2">Số điện thoại</div>
                 <input
+                  value={number}
+                  onChange={setNumber}
                   type="text"
                   className="form-control w-full px-3 py-2 border rounded-md"
                 />
@@ -193,7 +206,7 @@ const BodyAccount = () => {
                 <div className="address">Khâm Thiên, Đống Đa, Hà Nội</div>
               </div>
             </div>
-            <div className="btn-add bg-[#f04e40] rounded border text-white inline-block leading-6 text-center mt-5 mb-0 mx-0 px-3.5 py-2.5 border-[#f04e40] border-soli cursor-pointer">
+            <div className="btn-add bg-[#f04e40] rounded border text-white inline-block leading-6 text-center mt-5 mb-0 mx-0 px-3.5 py-2.5 border-[#f04e40] border-soli cursor-pointer hover:bg-[#d0011c]">
               + Thêm mới
             </div>
           </div>
@@ -201,7 +214,38 @@ const BodyAccount = () => {
       case "payment":
         return (
           <div className="tab-pane" id="payment-setting">
-            Payment content
+            <div className="setting-box rounded border text-[#333] grid gap-[26px] grid-cols-[248.5px_1px_248.5px_0px_248.5px] grid-rows-[24px] leading-6 text-left p-5 border-[#d5d6d6] border-solid">
+              <div className="payment-item items-center text-[#333] flex justify-between leading-6 text-left">
+                <div className="logo-method">
+                  <img
+                    src="https://projects.techmaster.vn/obo-stadium/image/visa.png"
+                    className=""
+                    alt=""
+                  />
+                </div>
+                <div className="card-number">********1234</div>
+                <div className="btn-delete text-[#f04e40] leading-6 text-left cursor-pointer">
+                  Xoá
+                </div>
+              </div>
+              <div className="break-line w-px bg-[#D5D6D6] h-full"></div>
+              <div className="payment-item items-center text-[#333] flex justify-between leading-6 text-left">
+                <div className="logo-method">
+                  <img
+                    src="https://projects.techmaster.vn/obo-stadium/image/visa.png"
+                    className=""
+                    alt=""
+                  />
+                </div>
+                <div className="card-number">********1234</div>
+                <div className="btn-delete text-[#f04e40] leading-6 text-left cursor-pointer">
+                  Xoá
+                </div>
+              </div>
+            </div>
+            <div className="btn-add bg-[#f04e40] rounded border text-white inline-block leading-6 text-center mt-5 mb-0 mx-0 px-3.5 py-2.5 border-[#f04e40] border-soli cursor-pointer hover:bg-[#d0011c]">
+              + Thêm mới
+            </div>
           </div>
         );
       default:
@@ -271,7 +315,7 @@ const BodyAccount = () => {
                 <a
                   onClick={handleLogout}
                   href="/home"
-                  className="block  mt-2 bg-[#f04e40] rounded border text-white leading-6 text-center px-3 py-1.5 border-[#f04e40] border-solid"
+                  className=" hover:bg-[#d0011c] block  mt-2 bg-[#f04e40] rounded border text-white leading-6 text-center px-3 py-1.5 border-[#f04e40] border-solid"
                 >
                   Đăng xuất
                 </a>
