@@ -1,15 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import useDebounce from "../../components/useDebounce";
 import logoWhite from "../../assets/img/logo-white.png";
+import SearchBar from "/Users/ngtuonghung/Reactjs-project24/reactjs-project24/src/components/SearchBar.jsx"; 
 
 const HeaderLogin = () => {
-  const [search, setSearch] = useState("");
-  const [filteredTitle, setFilteredTitle] = useState([]);
-  const handleSearch = (e) => setSearch(e.target.value);
-
   return (
-    <div className="container-full bg-[#333333]  leading-6  h-[100px] flex justify-center items-center">
+    <div className="container-full bg-[#333333] leading-6 h-[100px] flex justify-center items-center">
       <Link to="/home" className="logo">
         <img className="header-logo" src={logoWhite} alt="" />
       </Link>
@@ -41,20 +37,7 @@ const HeaderLogin = () => {
           </li>
         </ul>
       </div>
-      <div>
-        <form>
-          <div className="">
-            <input
-              className="bg-white rounded border text-[#333333] leading-6 px-3 py-1.5 border-[#ced4da] border-solid w-[590px]  mr-[100px]  z-[100] product-header"
-              type="text"
-              placeholder="Bạn cần tìm gì..."
-              onChange={handleSearch}
-              value={search}
-              data-metatip="true"
-            ></input>
-          </div>
-        </form>
-      </div>
+      <SearchBar />
     </div>
   );
 };

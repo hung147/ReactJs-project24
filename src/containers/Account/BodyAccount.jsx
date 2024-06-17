@@ -28,9 +28,9 @@ const BodyAccount = () => {
   }, []);
 
   // set birthday,email,name..
-  const [date, setDate] = useState(2);
-  const [month, setMonth] = useState(3);
-  const [year, setYear] = useState(1995);
+  const [date, setDate] = useState(23);
+  const [month, setMonth] = useState(10);
+  const [year, setYear] = useState(2002);
   const [name, setName] = useState("Nguyen Tuong Hung");
   const [email, setEmail] = useState("ngtuonghung@gmail.com");
   const [number, setNumber] = useState("0397489461");

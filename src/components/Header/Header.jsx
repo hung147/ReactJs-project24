@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { FaSearch } from "react-icons/fa";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import logoWhite from "../../assets/img/logo-white.png";
 import { auth } from "/Users/ngtuonghung/Reactjs-project24/reactjs-project24/src/containers/Login/FirebaseConfig.js";
 import "./Header.css";
-
+import SearchBar2 from "/Users/ngtuonghung/Reactjs-project24/reactjs-project24/src/components/SearchBar2.jsx";
 const Header = () => {
   const [user, setUser] = useState(null);
   const navigate = useNavigate(); // Initialize useNavigate
-// useEffect nay de xac minh k can thiet vi da dung o body account
+  // useEffect nay de xac minh k can thiet vi da dung o body account
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
@@ -84,14 +83,7 @@ const Header = () => {
       </div>
 
       <div className="search-container">
-        <input
-          type="text"
-          placeholder="Bạn cần tìm gì..."
-          className="search-input"
-        />
-        <button type="submit" className="search-button">
-          <FaSearch />
-        </button>
+        <SearchBar2 />
       </div>
     </div>
   );

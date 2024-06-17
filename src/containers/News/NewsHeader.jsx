@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logoWhite from "../../assets/img/logo-white.png";
-import { FaSearch } from "react-icons/fa";
+import SearchBar2 from "/Users/ngtuonghung/Reactjs-project24/reactjs-project24/src/components/SearchBar2.jsx";
+
 const NewsHeader = () => {
   return (
     <div className="header-container">
@@ -36,7 +37,7 @@ const NewsHeader = () => {
           </li>
           <li>
             <a
-              href="#"
+              href="/login"
               className="text-white hover:text-gray-300 hover:underline-mt relative text-lg"
             >
               Tài khoản
@@ -46,14 +47,7 @@ const NewsHeader = () => {
       </div>
 
       <div className="search-container">
-        <input
-          type="text"
-          placeholder="Bạn cần tìm gì..."
-          className="search-input"
-        />
-        <button type="submit" className="search-button">
-          <FaSearch />
-        </button>
+        <SearchBar2 />
       </div>
     </div>
   );
