@@ -6,4 +6,9 @@ export const PATH = {
   post: "/post",
   login: "/login",
   account: "/account",
+  buypage: "/buy-page",
+  sellpage: "/sell-page",
+  buyconfirm: "/buy-confirm",
+  sellconfirm: "/sell-confirm"
+
 };

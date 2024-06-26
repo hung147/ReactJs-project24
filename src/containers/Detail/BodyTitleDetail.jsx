@@ -6,7 +6,6 @@ import CardSectionRelate from "../../components/CardSectionRelate";
 import Zoom from "./ZoomDetail";
 import "./zoom.css";
 import SlideDetail from "./SlideDetail";
-import { useState } from "react";
 const BodyTitleDetail = () => {
   const images = [
     "https://projects.techmaster.vn/obo-stadium/image/product-details-image/1.jpg",
@@ -111,7 +110,7 @@ const BodyTitleDetail = () => {
                   <SizeButton />
                 </div>
                 <Link
-                  to={"./"}
+                  to="/buy-page"
                   className="buy-btn  items-center bg-[#11b76d] hover:bg-[#0f985b] rounded border text-white flex justify-between leading-6 text-center mt-0 mb-5 mx-0 px-5 py-3 border-[#12b76d] border-solid w-full"
                 >
                   <div className="ask-text w-[55%] border-r-white border-r border-solid">
@@ -132,7 +131,7 @@ const BodyTitleDetail = () => {
                   </div>
                 </Link>
                 <Link
-                  to={"./"}
+                  to="/sell-page"
                   className="sell-btn  items-center bg-[#f04e40] hover:bg-[#ce2e2f] rounded border text-white flex justify-between leading-6 text-center mt-0 mb-5 mx-0 px-5 py-3 border-[#12b76d] border-solid w-full"
                 >
                   <div className="ask-text w-[55%] border-r-white border-r border-solid">

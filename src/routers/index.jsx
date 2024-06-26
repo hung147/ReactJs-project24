@@ -7,6 +7,10 @@ import Post from "../containers/Post/Post";
 import LoginHome from "../containers/Login/LoginHome";
 // import Register from "../containers/Register/Register";
 import Account from "../containers/Account/Account";
+import BuyPage from "../containers/BuyPage/BuyPage";
+import SellPage from "../containers/SellPage/SellPage";
+import BuyConfirm from "../containers/BuyConfirm/BuyConfirm";
+import SellConfirm from "../containers/SellConfirm/SellConfirm";
 export const publicRouter = [
   {
     path: PATH.home,
@@ -39,5 +43,21 @@ export const publicRouter = [
   {
     path: PATH.account,
     element: Account,
+  },
+  {
+    path: PATH.buypage,
+    element: BuyPage,
+  },
+  {
+    path: PATH.sellpage,
+    element: SellPage,
+  },
+  {
+    path: PATH.buyconfirm,
+    element: BuyConfirm,
+  },
+  {
+    path: PATH.sellconfirm,
+    element: SellConfirm,
   },
 ];
